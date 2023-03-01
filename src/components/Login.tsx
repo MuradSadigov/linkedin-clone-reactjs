@@ -21,7 +21,7 @@ const Container = ({ children }: Props) => {
 };
 
 const Nav = ({ children }: Props) => {
-  return <nav className="max-w-[1128px] m-auto pt-[12px] ">{children}</nav>;
+  return <nav className="max-w-[1128px] m-auto pt-[12px] pr-0 pb-[16px]">{children}</nav>;
 };
 
 export default Login;
