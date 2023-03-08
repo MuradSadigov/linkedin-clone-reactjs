@@ -1,7 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import LoginLogo from "../../assets/images/login-logo.svg";
 
 const Nav = () => {
+  const navigate = useNavigate();
+  const signUpNavigator = () => {
+    navigate("/signup");
+  };
   return (
     <nav className="max-w-[1128px] m-auto py-[20px] flex items-center relative justify-between flex-nowrap max-xl:px-[20px]">
       <a href="/">
@@ -9,7 +14,7 @@ const Nav = () => {
       </a>
       <div className="flex gap-[12px]">
         <a
-          href="/"
+          onClick={signUpNavigator}
           className="text-[16px] py-[10px] px-[12px] no-underline text-black/50 rounded-[4px]
        hover:bg-black/5 hover:text-black "
         >

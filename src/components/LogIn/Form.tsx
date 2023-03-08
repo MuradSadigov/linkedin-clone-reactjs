@@ -1,17 +1,45 @@
 import React, { SyntheticEvent, useState } from "react";
 import GoogleSVG from "../../assets/images/google.svg";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../../firebase";
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
+interface ILogIn {
+  email: string;
+  password: string;
+}
 const Form = () => {
+  const {
+    reset,
+    handleSubmit,
+    formState: { errors },
+    register,
+  } = useForm<ILogIn>();
   const [isShow, setIsShow] = useState<boolean>(true);
-
+  const navigate = useNavigate();
   const passwordShowHandler = (event: SyntheticEvent) => {
     event.preventDefault();
     setIsShow(!isShow);
   };
 
+  const submitHandler = (data: ILogIn) => {
+    const { email, password } = data;
+    signInWithEmailAndPassword(auth, email, password)
+      .then(() => {
+        console.log("Succesfully Signed In");
+        navigate("/home");
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+
+    reset();
+  };
+
   return (
     <div className="w-fit max-md:w-full">
-      <form>
+      <form onSubmit={handleSubmit(submitHandler)}>
         <div className="flex flex-col my-[12px]">
           <label
             htmlFor="email"
@@ -25,6 +53,7 @@ const Form = () => {
               id="email"
               className="w-full outline-none text-[16px] autofill:bg-[#E8F0FE]"
               autoComplete="on"
+              {...register("email")}
             />
           </div>
         </div>
@@ -42,6 +71,7 @@ const Form = () => {
               id="password"
               className="w-full outline-none text-[16px]  autofill:bg-[#E8F0FE]"
               autoComplete="on"
+              {...register("password")}
             />
             <button
               onClick={passwordShowHandler}
@@ -54,7 +84,7 @@ const Form = () => {
 
         <div className="flex flex-col">
           <a
-            href="https://www.netflix.com/hu-en/"
+            href=""
             className="font-[600] text-[#0a66c2] leading-[1.25] hover:underline hover:text-[#004182] w-fit my-[16px]"
           >
             Forgot password?
@@ -69,8 +99,8 @@ const Form = () => {
         </div>
 
         <div className="relative py-[24px] flex items-center justify-center">
-          <div className="absolute border-gray-300 border-[1px] bg-gray-300 w-[400px] -z-10"></div>
-          <span className="px-[16px] bg-white">or</span>
+          <div className="absolute border-gray-600 border-[1px] bg-gray-300 w-[400px] -z-10"></div>
+          <span className="px-[16px] bg-[#f3f2ef]">or</span>
         </div>
       </form>
 

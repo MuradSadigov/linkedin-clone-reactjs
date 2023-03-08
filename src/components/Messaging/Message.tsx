@@ -1,6 +1,6 @@
 import React from 'react'
 
-const JoinNow = () => {
+const Message = () => {
   return (
     <div>
         
@@ -8,4 +8,4 @@ const JoinNow = () => {
   )
 }
 
-export default JoinNow
+export default Message
