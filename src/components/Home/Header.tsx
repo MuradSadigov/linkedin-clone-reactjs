@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import HomeSVG from "../../assets/images/home-logo.svg";
-import SearchIcon from "../../assets/images/search-icon.svg";
-import UserSVG from "../../assets/images/user.svg";
-import DownIconSVG from "../../assets/images/down-icon.svg";
+import {
+  DownIconSVG,
+  UserSVG,
+  SearchIconSVG,
+  HomeLogoSVG,
+} from "../../assets/index";
 import { navigations } from "../../constants/navigations";
 import { signOut } from "firebase/auth";
 import { auth } from "../../../firebase";
@@ -15,7 +17,7 @@ const Header = () => {
     signOut(auth)
       .then(() => {
         console.log(`User sign out successfully`);
-        navigate("/")
+        navigate("/");
       })
       .catch((error) => {
         console.error(error);
@@ -26,9 +28,9 @@ const Header = () => {
     <div className="fixed top-0 left-0 z-10 w-screen px-[24px] border-b-1 border-b-black/5 bg-white">
       <div className="flex items-center mx-auto min-h-full max-w-[1128px]">
         <span className="mr-[8px] text-[0px]">
-          <a onClick={() => navigate("/home", {replace: true})}>
+          <a onClick={() => navigate("/home", { replace: true })}>
             <img
-              src={HomeSVG}
+              src={HomeLogoSVG}
               alt="Home SVG"
               className="min-w-[34px] min-h-[34px]"
             />
@@ -47,7 +49,7 @@ const Header = () => {
             />
           </div>
           <div className="absolute left-2 z-10">
-            <img src={SearchIcon} alt="Search Icon" width={18} />
+            <img src={SearchIconSVG} alt="Search Icon" width={18} />
           </div>
         </div>
         <nav className="max-sm:fixed max-sm:left-0 max-sm:bottom-0 max-sm:bg-white max-sm:w-full ml-auto flex items-center justify-center">

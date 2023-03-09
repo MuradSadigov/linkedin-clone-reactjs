@@ -1,6 +1,6 @@
 import React from "react";
-import SendPost from "./SendPost";
-import Sort from "./Sort";
+import SendPost from "./Feed/SendPost";
+import Sort from "./Feed/Sort";
 
 const Feed = () => {
   return (

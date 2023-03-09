@@ -16,9 +16,10 @@ const Sort = () => {
       onClick={() => setIsClicked(!isClicked)}
       className="w-full relative flex flex-row items-center justify-between"
     >
-      <div className="w-[425px] bg-black/25 h-[1px]"></div>
-      <div className="text-black/60 text-[12px] flex flex-row justify-between w-[110px] items-center">
-        Sort by: <span className="text-black font-[800]">{sortValue}</span>
+      <div className="bg-black/25 h-[1px] flex-1 mr-[10px]"></div>
+      <div className="text-black/60 text-[12px] flex flex-row justify-between w-fit items-center">
+        Sort by:{" "}
+        <span className="text-black font-[800] mx-[4px]">{sortValue}</span>
         <ChevronDownIcon width={16} height={16} color={"black"} />
       </div>
       <div
@@ -28,13 +29,17 @@ const Sort = () => {
       >
         <button
           onClick={() => clickHanlder("Top")}
-          className={`${sortValue == "Top" && "border-l-green-600"} border-l-2 h-[35px] px-[20px] text-black/60 hover:bg-black/10 font-[500] w-full text-left`}
+          className={`${
+            sortValue == "Top" && "border-l-green-600"
+          } border-l-2 h-[35px] px-[20px] text-black/60 hover:bg-black/10 font-[500] w-full text-left`}
         >
           Top
         </button>
         <button
           onClick={() => clickHanlder("Recent")}
-          className={`${sortValue == "Recent" && "border-l-green-600"} border-l-2 h-[35px] px-[20px] text-black/60 hover:bg-black/10 font-[500] w-full text-left`}
+          className={`${
+            sortValue == "Recent" && "border-l-green-600"
+          } border-l-2 h-[35px] px-[20px] text-black/60 hover:bg-black/10 font-[500] w-full text-left`}
         >
           Recent
         </button>
