@@ -10,7 +10,7 @@ import Modal from "../../Modals/Modal";
 
 const SendPost = () => {
   return (
-    <div className="w-full min-h-[116px] rounded-xl bg-[#fff] flex flex-col border shadow-sm mb-[8px] pb-[4px]">
+    <div className="w-full min-h-[116px] rounded-xl bg-[#fff] flex flex-col border shadow-sm pb-[4px]">
       <div className="flex flex-row justify-between items-center mx-[16px] mt-[10px]">
         <a className="cursor-pointer">
           <img
@@ -21,7 +21,7 @@ const SendPost = () => {
         </a>
         <button
           onClick={() => {}}
-          className="text-left bg-transparent rounded-full w-[452px] duration-[165ms] h-[48px] py-[10px] px-[16px] my-[4px] hover:bg-black/5 border border-black/30 font-[600] text-black/60"
+          className="text-left bg-transparent rounded-full w-[452px] duration-[167ms] h-[48px] py-[10px] px-[16px] my-[4px] hover:bg-black/10 border border-black/30 font-[600] text-black/60"
         >
           Start a post
         </button>

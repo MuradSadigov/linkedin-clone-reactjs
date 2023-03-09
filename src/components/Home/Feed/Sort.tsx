@@ -12,9 +12,9 @@ const Sort = () => {
   };
 
   return (
-    <button
+    <div
       onClick={() => setIsClicked(!isClicked)}
-      className="w-full relative flex flex-row items-center justify-between"
+      className="w-full relative flex flex-row items-center justify-between hover:cursor-pointer my-[8px]"
     >
       <div className="bg-black/25 h-[1px] flex-1 mr-[10px]"></div>
       <div className="text-black/60 text-[12px] flex flex-row justify-between w-fit items-center">
@@ -44,7 +44,7 @@ const Sort = () => {
           Recent
         </button>
       </div>
-    </button>
+    </div>
   );
 };
 

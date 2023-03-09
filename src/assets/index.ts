@@ -23,6 +23,20 @@ import UserSVG from "./images/user.svg";
 import VideoSVG from "./images/video.svg";
 import WidgetIconSVG from "./images/widget-icon.svg";
 
+import LikeClapSVG from "./images/likeTypes/clap.svg";
+import LikeFunnySVG from "./images/likeTypes/funny.svg";
+import LikeGiveHeartSVG from "./images/likeTypes/giveHeart.svg";
+import LikeLampSVG from "./images/likeTypes/lamp.svg";
+import LikeLoveSVG from "./images/likeTypes/love.svg";
+import LikeThumbUpSVG from "./images/likeTypes/thumbUp.svg";
+
+import LikeActionClapSVG from "./images/likeActions/clap.svg";
+import LikeActionFunnySVG from "./images/likeActions/funny.svg";
+import LikeActionGiveHeartSVG from "./images/likeActions/giveHeart.svg";
+import LikeActionLampSVG from "./images/likeActions/lamp.svg";
+import LikeActionLoveSVG from "./images/likeActions/love.svg";
+import LikeActionThumbUpSVG from "./images/likeActions/thumbUp.svg";
+
 export {
   ArticleSVG,
   CardBgSVG,
@@ -48,4 +62,16 @@ export {
   UserSVG,
   VideoSVG,
   WidgetIconSVG,
+  LikeClapSVG,
+  LikeFunnySVG,
+  LikeGiveHeartSVG,
+  LikeLampSVG,
+  LikeLoveSVG,
+  LikeThumbUpSVG,
+  LikeActionClapSVG,
+  LikeActionFunnySVG,
+  LikeActionGiveHeartSVG,
+  LikeActionLampSVG,
+  LikeActionLoveSVG,
+  LikeActionThumbUpSVG,
 };

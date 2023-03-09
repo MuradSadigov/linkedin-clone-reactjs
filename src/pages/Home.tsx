@@ -3,7 +3,7 @@ import Feed from "../components/Home/Feed";
 
 const Home = () => {
   return (
-    <div className="mt-[80px] h-[1000px]">
+    <div className="mt-[80px]">
       <Feed />
     </div>
   );
