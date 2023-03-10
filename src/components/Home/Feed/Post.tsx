@@ -49,7 +49,7 @@ const Post = () => {
             </span>
           </div>
         </div>
-        <div className="w-[32px] h-[32px] flex justify-center items-center bg-transparent hover:bg-black/10 duration-[167ms] rounded-full hover:cursor-pointer absolute right-3 top-3 z-50">
+        <div className="w-[32px] h-[32px] flex justify-center items-center bg-transparent hover:bg-black/10 duration-[167ms] rounded-full hover:cursor-pointer absolute right-3 top-3 z-20">
           <EllipsisHorizontalIcon height={32} width={32} color="grey" />
         </div>
       </div>

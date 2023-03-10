@@ -25,6 +25,7 @@ const SendPost = () => {
         >
           Start a post
         </button>
+        <Modal />
       </div>
       <div className="flex flex-row justify-around items-center min-h-[52px]">
         <button className="rounded-md px-[8px] bg-transparent hover:bg-black/10 duration-[167ms] flex flex-row justify-center items-center h-[48px]">
